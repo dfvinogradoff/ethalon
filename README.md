@@ -27,4 +27,7 @@ stages:
         - loaders.dropSchema
         - loaders.createSchema
         - loaders.postgres
+    update:
+        - { action: extractors.delta, arguments: { mode: 'local' } }
+        - loaders.postgres
 ```
